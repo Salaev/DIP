@@ -1,0 +1,5 @@
+rootProject.name = 'Dip'
+
+include 'dip'
+include 'dip_next'
+
