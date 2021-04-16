@@ -1,5 +1,22 @@
 allprojects{
     apply plugin:'java'
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+    test {
+        useJUnitPlatform()
+    }
+
+}
+
+subprojects {
+    apply plugin: 'java-library'
+    dependencies {
+        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.1'
+        testImplementation 'org.mockito:mockito-junit-jupiter:3.6.0'
+        testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.7.1'
+    }
 }
 
 
